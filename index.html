@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b5bd3">
+<title>Goyal Stationery & Toy Shop — Catalogue</title>
+<style>
+:root{--blue:#0b5bd3;--blue2:#063b91;--bg:#f5f8fc;--text:#12213a;--muted:#66758a;--card:#fff;--line:#e6ebf2}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{position:sticky;top:0;z-index:5;background:linear-gradient(135deg,var(--blue2),var(--blue));color:white;padding:18px 16px 16px;box-shadow:0 4px 18px #1233}
+.wrap{max-width:760px;margin:auto} .brand{font-size:22px;font-weight:800} .sub{opacity:.9;font-size:13px;margin-top:3px}
+main{padding:18px 14px 32px} h1{font-size:26px;margin:6px 0 5px} .lead{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.category{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 15px;box-shadow:0 5px 18px #163d7a0b;cursor:pointer;min-height:145px;display:flex;flex-direction:column;justify-content:space-between}
+.icon{font-size:38px} .ctitle{font-weight:800;font-size:18px} .count{font-size:12px;color:var(--muted);margin-top:3px}
+.hero{background:linear-gradient(135deg,#0b5bd3,#2878e8);color:#fff;border-radius:22px;padding:22px 18px;margin-bottom:20px;box-shadow:0 9px 25px #0b5bd326;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:#fff2;right:-45px;top:-55px}
+.hero h1{font-size:25px;margin:0 0 7px;line-height:1.15}.hero p{margin:0;opacity:.94;font-size:14px;line-height:1.45}
+.badge{display:inline-block;background:#fff;color:var(--blue);padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;margin-bottom:12px}
+.section-title{font-size:21px;font-weight:850;margin:5px 2px 4px}.section-sub{color:var(--muted);font-size:13px;margin:0 2px 14px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.category{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 20px #163d7a0b;cursor:pointer}
+.cat-img{height:145px;background:#eef4fb;display:flex;align-items:center;justify-content:center;padding:12px}.cat-img img{width:100%;height:100%;object-fit:contain}
+.cat-body{padding:14px 15px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}.arrow{width:36px;height:36px;border-radius:50%;background:#edf4ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800}
+.trust{margin:20px 0 4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px;text-align:center}.trust strong{display:block;font-size:14px}.trust span{font-size:12px;color:var(--muted)}
+.hidden{display:none} .toolbar{display:flex;gap:9px;margin:12px 0 16px} button,.back{border:0;border-radius:12px;padding:11px 14px;font-weight:700;cursor:pointer}
+.back{background:#e8f0ff;color:var(--blue)} input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:15px;outline:none}
+.products{display:grid;gap:14px} .product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #163d7a0b}
+.product img{width:100%;display:block;aspect-ratio:4/5;object-fit:contain;background:#eef3f9} .pbody{padding:13px 14px 15px} .pname{font-weight:800;font-size:17px;line-height:1.25} .desc{color:var(--muted);font-size:13px;margin:6px 0 10px;line-height:1.4} .mrp{font-size:20px;font-weight:900;color:var(--blue)} .tag{display:inline-block;background:#edf4ff;color:var(--blue);padding:5px 8px;border-radius:999px;font-size:11px;font-weight:700;margin-bottom:9px}
+.empty{text-align:center;color:var(--muted);padding:30px} footer{text-align:center;color:var(--muted);font-size:12px;padding:8px 0 25px}
+@media(min-width:700px){
+main{padding:28px 22px 45px}
+.hero{padding:32px 34px;margin-bottom:28px}
+.hero h1{font-size:34px;max-width:700px}
+.hero p{font-size:15px;max-width:650px}
+.section-title{font-size:25px}
+.section-sub{font-size:14px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.category{border-radius:22px}
+.cat-img{height:245px;padding:18px}
+.cat-body{padding:17px 18px 19px}
+.ctitle{font-size:19px}
+.trust{margin-top:26px;padding:18px}
+.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.product img{aspect-ratio:1/1}
+} .category{min-height:170px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Goyal Stationery & Toy Shop</div><div class="sub">Digital Product Catalogue</div></div></header>
+<main class="wrap">
+<section id="home">
+<div class="hero">
+<span class="badge">🛍️ OUR PRODUCT CATALOGUE</span>
+<h1>Everything you need, all in one place.</h1>
+<p>Browse stationery, lunch boxes and ready-to-use kits. Tap a category below to explore our products and MRP.</p>
+</div>
+<div class="section-title">Shop by Category</div>
+<p class="section-sub">Choose a category to view available products.</p>
+<div class="grid">
+<div class="category" onclick="openCat('stationery')">
+<div class="cat-img"><img src="Images/home_stationery.png" alt="Stationery Items"></div>
+<div class="cat-body"><div><div class="ctitle">🖊️ Stationery Items</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
+</div>
+<div class="category" onclick="openCat('lunch')">
+<div class="cat-img"><img src="Images/home_lunch.png" alt="Lunch Boxes"></div>
+<div class="cat-body"><div><div class="ctitle">🍱 Lunch Boxes</div><div class="count">6 products</div></div><div class="arrow">›</div></div>
+</div>
+<div class="category" onclick="openCat('kits')">
+<div class="cat-img"><img src="Images/home_kits.png" alt="Kits"></div>
+<div class="cat-body"><div><div class="ctitle">🎒 Kits</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
+</div>
+</div>
+<div class="trust"><strong>⭐ Quality Products • Great Prices • Trusted Local Shop</strong><span>Available at Goyal Stationery & Toy Shop</span></div>
+</section>
+<section id="catalog" class="hidden">
+<div class="toolbar"><button class="back" onclick="goHome()">← Home</button><input id="search" placeholder="Search products…" oninput="renderProducts()"></div>
+<h1 id="catTitle"></h1><p class="lead" id="catLead"></p>
+<div id="products" class="products"></div>
+</section>
+<footer>Available at Goyal Stationery & Toy Shop</footer>
+</main>
+<script>
+const products=[{"cat": "stationery", "name": "DOMS Zillion Pencil", "mrp": "₹60", "img": "stationery_zillion.png", "desc": "Extra dark graphite • Smooth writing • Break-resistant lead"}, {"cat": "stationery", "name": "DOMS Groove Pencil", "mrp": "₹60", "img": "stationery_groove.png", "desc": "Innovative groove grip • Super dark HB/2B • Includes eraser & sharpener"}, {"cat": "stationery", "name": "Hauser ICY Super Dark Pencil", "mrp": "₹60", "img": "stationery_hauser_icy.png", "desc": "Super dark lead • Smooth writing • Break resistant • Attractive colour cap"}, {"cat": "stationery", "name": "Hauser Woodzy Super Dark Premium Pencil", "mrp": "₹100", "img": "stationery_hauser_woodzy.png", "desc": "Premium wood body • Super dark graphite • Smooth writing • Eraser included"}, {"cat": "lunch", "name": "Khanna Lunch Box — Standard Quality", "mrp": "₹25", "img": "lunch_khanna.png", "desc": "Compact design • Durable & strong • BPA-free • Ideal for school & travel"}, {"cat": "lunch", "name": "Khanna Lunch Box — Premium Quality", "mrp": "₹40", "img": "lunch_khanna.png", "desc": "Premium quality option • Durable design • Ideal for school & travel"}, {"cat": "lunch", "name": "Hungry Basic Lunch Box", "mrp": "₹40", "img": "lunch_hungry_basic.png", "desc": "2 spacious compartments • Spoon & fork • BPA-free • Durable & lightweight"}, {"cat": "lunch", "name": "Telephone Lunch Box", "mrp": "₹70", "img": "lunch_telephone.png", "desc": "Fun telephone design • Multiple compartments • Cutlery set • BPA-free"}, {"cat": "lunch", "name": "Hungry RPS Lunch Box", "mrp": "₹75", "img": "lunch_rps.png", "desc": "Premium small lunch box • Multiple containers • Compact design"}, {"cat": "lunch", "name": "Fruit Lunch Box", "mrp": "₹90", "img": "lunch_fruit.png", "desc": "Cute fruit designs • Compact & portable • Ideal for fruits & snacks"}, {"cat": "kits", "name": "DOMS Palladium Pencil Kit", "mrp": "₹15", "img": "kit_palladium.png", "desc": "Pencil • Scale • Sharpener • Eraser"}, {"cat": "kits", "name": "DOMS Classroom Kit", "mrp": "₹20", "img": "kit_classroom.png", "desc": "Classroom essentials with pencil, scale, sharpener and eraser"}, {"cat": "kits", "name": "DOMS All The Best Kit", "mrp": "₹20", "img": "kit_all_the_best.png", "desc": "Study kit with pencil, scale, sharpener and eraser"}, {"cat": "kits", "name": "DOMS Zillion Kit", "mrp": "₹30", "img": "kit_zillion.png", "desc": "Premium Zillion kit with pencil, scale, sharpener, eraser and pen"}];
+const labels={stationery:["Stationery Items","Writing & school essentials"],lunch:["Lunch Boxes","School, travel & everyday lunch boxes"],kits:["Kits","Ready-to-use stationery kits"]};
+let active=null;
+function openCat(cat){active=cat;document.getElementById('home').classList.add('hidden');document.getElementById('catalog').classList.remove('hidden');document.getElementById('catTitle').textContent=labels[cat][0];document.getElementById('catLead').textContent=labels[cat][1];document.getElementById('search').value='';renderProducts();window.scrollTo({top:0,behavior:'smooth'});history.pushState({cat},'', '#'+cat)}
+function goHome(){active=null;document.getElementById('catalog').classList.add('hidden');document.getElementById('home').classList.remove('hidden');history.pushState({},'',location.pathname);window.scrollTo({top:0,behavior:'smooth'})}
+function renderProducts(){const q=document.getElementById('search').value.toLowerCase().trim();const list=products.filter(p=>p.cat===active && (!q || (p.name+' '+p.desc).toLowerCase().includes(q)));const el=document.getElementById('products');el.innerHTML=list.length?list.map(p=>`<article class="product"><img src="Images/${p.img}" alt="${p.name}" loading="lazy"><div class="pbody"><span class="tag">${active==='stationery'?'STATIONERY':active==='lunch'?'LUNCH BOX':'KIT'}</span><div class="pname">${p.name}</div><div class="desc">${p.desc}</div><div class="mrp">MRP ${p.mrp}</div></div></article>`).join(''):'<div class="empty">No matching products found.</div>'}
+window.addEventListener('popstate',()=>{const c=location.hash.slice(1);c&&labels[c]?openCat(c):goHome()});
+const initial=location.hash.slice(1);if(initial&&labels[initial])openCat(initial);
+</script>
+</body></html>
