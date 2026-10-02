@@ -14,24 +14,50 @@ main{padding:18px 14px 32px} h1{font-size:26px;margin:6px 0 5px} .lead{color:var
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
 .category{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 15px;box-shadow:0 5px 18px #163d7a0b;cursor:pointer;min-height:145px;display:flex;flex-direction:column;justify-content:space-between}
 .icon{font-size:38px} .ctitle{font-weight:800;font-size:18px} .count{font-size:12px;color:var(--muted);margin-top:3px}
+.hero{background:linear-gradient(135deg,#0b5bd3,#2878e8);color:#fff;border-radius:22px;padding:22px 18px;margin-bottom:20px;box-shadow:0 9px 25px #0b5bd326;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:#fff2;right:-45px;top:-55px}
+.hero h1{font-size:25px;margin:0 0 7px;line-height:1.15}.hero p{margin:0;opacity:.94;font-size:14px;line-height:1.45}
+.badge{display:inline-block;background:#fff;color:var(--blue);padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;margin-bottom:12px}
+.section-title{font-size:21px;font-weight:850;margin:5px 2px 4px}.section-sub{color:var(--muted);font-size:13px;margin:0 2px 14px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.category{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 20px #163d7a0b;cursor:pointer}
+.cat-img{height:145px;background:#eef4fb;display:flex;align-items:center;justify-content:center;padding:12px}.cat-img img{width:100%;height:100%;object-fit:contain}
+.cat-body{padding:14px 15px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}.arrow{width:36px;height:36px;border-radius:50%;background:#edf4ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800}
+.trust{margin:20px 0 4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px;text-align:center}.trust strong{display:block;font-size:14px}.trust span{font-size:12px;color:var(--muted)}
 .hidden{display:none} .toolbar{display:flex;gap:9px;margin:12px 0 16px} button,.back{border:0;border-radius:12px;padding:11px 14px;font-weight:700;cursor:pointer}
 .back{background:#e8f0ff;color:var(--blue)} input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:15px;outline:none}
 .products{display:grid;gap:14px} .product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #163d7a0b}
 .product img{width:100%;display:block;aspect-ratio:4/5;object-fit:contain;background:#eef3f9} .pbody{padding:13px 14px 15px} .pname{font-weight:800;font-size:17px;line-height:1.25} .desc{color:var(--muted);font-size:13px;margin:6px 0 10px;line-height:1.4} .mrp{font-size:20px;font-weight:900;color:var(--blue)} .tag{display:inline-block;background:#edf4ff;color:var(--blue);padding:5px 8px;border-radius:999px;font-size:11px;font-weight:700;margin-bottom:9px}
 .empty{text-align:center;color:var(--muted);padding:30px} footer{text-align:center;color:var(--muted);font-size:12px;padding:8px 0 25px}
-@media(min-width:650px){.products{grid-template-columns:repeat(2,minmax(0,1fr))} .category{min-height:170px}}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cat-img{height:170px}.products{grid-template-columns:repeat(2,minmax(0,1fr))} .category{min-height:170px}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><div class="brand">Goyal Stationery & Toy Shop</div><div class="sub">Digital Product Catalogue</div></div></header>
 <main class="wrap">
 <section id="home">
-<h1>Choose a category</h1><p class="lead">Tap any category to browse our products.</p>
-<div class="grid">
-<div class="category" onclick="openCat('stationery')"><div class="icon">🖊️</div><div><div class="ctitle">Stationery Items</div><div class="count">4 products</div></div></div>
-<div class="category" onclick="openCat('lunch')"><div class="icon">🍱</div><div><div class="ctitle">Lunch Boxes</div><div class="count">6 products</div></div></div>
-<div class="category" onclick="openCat('kits')"><div class="icon">🎒</div><div><div class="ctitle">Kits</div><div class="count">4 products</div></div></div>
+<div class="hero">
+<span class="badge">🛍️ OUR PRODUCT CATALOGUE</span>
+<h1>Everything you need, all in one place.</h1>
+<p>Browse stationery, lunch boxes and ready-to-use kits. Tap a category below to explore our products and MRP.</p>
 </div>
+<div class="section-title">Shop by Category</div>
+<p class="section-sub">Choose a category to view available products.</p>
+<div class="grid">
+<div class="category" onclick="openCat('stationery')">
+<div class="cat-img"><img src="Images/stationery_zillion.png" alt="Stationery Items"></div>
+<div class="cat-body"><div><div class="ctitle">🖊️ Stationery Items</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
+</div>
+<div class="category" onclick="openCat('lunch')">
+<div class="cat-img"><img src="Images/lunch_khanna.png" alt="Lunch Boxes"></div>
+<div class="cat-body"><div><div class="ctitle">🍱 Lunch Boxes</div><div class="count">6 products</div></div><div class="arrow">›</div></div>
+</div>
+<div class="category" onclick="openCat('kits')">
+<div class="cat-img"><img src="Images/kit_palladium.png" alt="Kits"></div>
+<div class="cat-body"><div><div class="ctitle">🎒 Kits</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
+</div>
+</div>
+<div class="trust"><strong>⭐ Quality Products • Great Prices • Trusted Local Shop</strong><span>Available at Goyal Stationery & Toy Shop</span></div>
 </section>
 <section id="catalog" class="hidden">
 <div class="toolbar"><button class="back" onclick="goHome()">← Home</button><input id="search" placeholder="Search products…" oninput="renderProducts()"></div>
