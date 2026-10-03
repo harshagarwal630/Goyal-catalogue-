@@ -33,15 +33,11 @@ main{padding:18px 14px 32px} h1{font-size:26px;margin:6px 0 5px} .lead{color:var
 .sale{margin:0 0 28px;background:linear-gradient(135deg,#fff7df,#fff);border:1px solid #f0d58a;border-radius:22px;padding:18px;box-shadow:0 7px 24px #9b6a150f}
 .sale-head h2{margin:8px 0 4px;font-size:24px}.sale-head p{margin:0;color:var(--muted);font-size:13px}
 .sale-badge{display:inline-block;background:#d99a00;color:#fff;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:900}
-.sale-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
-.sale-card{background:#fff;border:1px solid #eee0bd;border-radius:16px;overflow:hidden}
-.sale-card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff}
-.sale-body{padding:10px}.sale-name{font-weight:800;font-size:14px;line-height:1.25}.sale-price{font-weight:900;color:var(--blue);margin-top:5px}
-.coupon{display:inline-block;margin-top:7px;background:#edf4ff;color:var(--blue);padding:5px 7px;border-radius:999px;font-size:10px;font-weight:800}
+.sale-category{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #f0d58a;border-radius:18px;padding:14px 16px;cursor:pointer}.sale-icon{font-size:32px}.sale-category h2{margin:5px 0 2px;font-size:20px}.sale-category p{margin:0;color:var(--muted);font-size:12px}.sale-category .arrow{margin-left:auto;font-size:30px;font-weight:700}.coupon{display:inline-block;margin-top:7px;background:#edf4ff;color:var(--blue);padding:5px 7px;border-radius:999px;font-size:10px;font-weight:800}
 .filters{display:flex;gap:7px;overflow:auto;padding-bottom:2px;margin:0 0 12px}
 .filter{white-space:nowrap;background:#edf4ff;color:var(--blue);padding:8px 10px;border-radius:999px;border:1px solid #d8e6ff;font-size:12px;font-weight:800;cursor:pointer}
 .filter.active{background:var(--blue);color:#fff}
-@media(min-width:700px){.sale{padding:24px}.sale-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
+@media(min-width:700px){.sale{padding:24px}}
 @media(min-width:700px){
 main{padding:28px 22px 45px}
 .hero{padding:32px 34px;margin-bottom:28px}
@@ -70,29 +66,30 @@ main{padding:28px 22px 45px}
 <p>Browse stationery, lunch boxes and ready-to-use kits. Tap a category below to explore our products and MRP.</p>
 </div>
 <section class="sale">
-<div class="sale-head">
-  <div>
-    <span class="sale-badge">🎉 NAVRATRI SALE</span>
-    <h2>Special Navratri Offers</h2>
-    <p>Selected products up to ₹150 with special coupon discounts.</p>
+  <div class="sale-category" onclick="openCat('sale')">
+    <div class="sale-icon">🎉</div>
+    <div>
+      <span class="sale-badge">NAVRATRI SALE</span>
+      <h2>Special Navratri Offers</h2>
+      <p>Shop selected products with special coupon discounts.</p>
+    </div>
+    <div class="arrow">›</div>
   </div>
-</div>
-<div id="saleProducts" class="sale-grid"></div>
 </section>
 
 <div class="section-title">Shop by Category</div>
 <p class="section-sub">Choose a category to view available products.</p>
 <div class="grid">
 <div class="category" onclick="openCat('stationery')">
-<div class="cat-img"><img src="Images/home_stationery.png" alt="Stationery Items"></div>
+<div class="cat-img"><img src="Images/stationery item(1).png" onerror="this.onerror=null;this.src='Images/stationery_zillion.png'" alt="Stationery Items"></div>
 <div class="cat-body"><div><div class="ctitle">🖊️ Stationery Items</div><div class="count">8 products</div></div><div class="arrow">›</div></div>
 </div>
 <div class="category" onclick="openCat('lunch')">
-<div class="cat-img"><img src="Images/home_lunch.png" alt="Lunch Boxes"></div>
+<div class="cat-img"><img src="Images/lunch home page(1).png" onerror="this.onerror=null;this.src='Images/lunch_hungry_basic.png'" alt="Lunch Boxes"></div>
 <div class="cat-body"><div><div class="ctitle">🍱 Lunch Boxes</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
 </div>
 <div class="category" onclick="openCat('kits')">
-<div class="cat-img"><img src="Images/home_kits.png" alt="Kits"></div>
+<div class="cat-img"><img src="Images/kit combo(1).png" onerror="this.onerror=null;this.src='Images/kit_palladium.png'" alt="Kits"></div>
 <div class="cat-body"><div><div class="ctitle">🎒 Kits</div><div class="count">4 products</div></div><div class="arrow">›</div></div>
 </div>
 </div><div class="trust"><strong>⭐ Quality Products • Great Prices • Trusted Local Shop</strong><span>Available at Goyal Stationery & Toy Shop</span></div>
@@ -107,7 +104,7 @@ main{padding:28px 22px 45px}
 </main>
 <script>
 const products=[{"cat":"stationery","name":"DOMS Zillion Pencil","mrp":60,"img":"stationery_zillion.png","desc":"Extra dark graphite • Smooth writing • Break-resistant lead"},{"cat":"stationery","name":"DOMS Groove Pencil","mrp":60,"img":"stationery_groove.png","desc":"Innovative groove grip • Super dark HB/2B • Includes eraser & sharpener"},{"cat":"stationery","name":"Hauser ICY Super Dark Pencil","mrp":60,"img":"stationery_hauser_icy.png","desc":"Super dark lead • Smooth writing • Break resistant • Attractive colour cap"},{"cat":"stationery","name":"Hauser Woodzy Super Dark Premium Pencil","mrp":100,"img":"stationery_hauser_woodzy.png","desc":"Premium wood body • Super dark graphite • Smooth writing • Eraser included"},{"cat":"stationery","name":"DOMS Sketch Colour – 10 Shades","mrp":12,"img":"stationery_sketch_colour_10.png","desc":"10 shades • Colouring set for school and creative activities"},{"cat":"stationery","name":"DOMS Sketch Colour – 12 Shades","mrp":15,"img":"stationery_sketch_colour_12.png","desc":"12 shades • Colouring set for school and creative activities"},{"cat":"stationery","name":"DOMS Wax Crayons – 10 Shades","mrp":10,"img":"stationery_wax_crayons_10.png","desc":"10 bright shades • Smooth colouring • Ideal for kids"},{"cat":"stationery","name":"DOMS Wax Crayons – Small","mrp":20,"img":"stationery_wax_crayons_small.png","desc":"Compact wax crayon set • Bright colours • Ideal for school"},{"cat":"lunch","name":"Hungry Basic Lunch Box","mrp":40,"img":"lunch_hungry_basic.png","desc":"2 spacious compartments • Spoon & fork • BPA-free • Durable & lightweight"},{"cat":"lunch","name":"Telephone Lunch Box","mrp":70,"img":"lunch_telephone.png","desc":"Fun telephone design • Multiple compartments • Cutlery set • BPA-free"},{"cat":"lunch","name":"Hungry RPS Lunch Box","mrp":75,"img":"lunch_rps.png","desc":"Premium small lunch box • Multiple containers • Compact design"},{"cat":"lunch","name":"Fruit Lunch Box","mrp":90,"img":"lunch_fruit.png","desc":"Cute fruit designs • Compact & portable • Ideal for fruits & snacks"},{"cat":"kits","name":"DOMS Palladium Pencil Kit","mrp":15,"img":"kit_palladium.png","desc":"Pencil • Scale • Sharpener • Eraser"},{"cat":"kits","name":"DOMS Classroom Kit","mrp":20,"img":"kit_classroom.png","desc":"Classroom essentials with pencil, scale, sharpener and eraser"},{"cat":"kits","name":"DOMS All The Best Kit","mrp":20,"img":"kit_all_the_best.png","desc":"Study kit with pencil, scale, sharpener and eraser"},{"cat":"kits","name":"DOMS Zillion Kit","mrp":30,"img":"kit_zillion.png","desc":"Premium Zillion kit with pencil, scale, sharpener, eraser and pen"}];
-const labels={stationery:["Stationery Items","Writing & school essentials"],lunch:["Lunch Boxes","School, travel & everyday lunch boxes"],kits:["Kits","Ready-to-use stationery kits"]};
+const labels={sale:['Navratri Sale','Special offers on selected products'],stationery:["Stationery Items","Writing & school essentials"],lunch:["Lunch Boxes","School, travel & everyday lunch boxes"],kits:["Kits","Ready-to-use stationery kits"]};
 let active=null;
 let priceMax=999999;
 const coupon={kits:["kit10","10%"],lunch:["lunch30","30%"],stationery:["Pencil10","10%"]};
@@ -120,6 +117,7 @@ function openCat(cat){
  document.getElementById('catLead').textContent=labels[cat][1];
  document.getElementById('search').value='';
  document.querySelectorAll('.filter').forEach((b,i)=>b.classList.toggle('active',i===0));
+ if(document.getElementById('filters')) document.getElementById('filters').classList.toggle('hidden',active==='sale');
  renderProducts();
  window.scrollTo({top:0,behavior:'smooth'});
  history.pushState({cat},'', '#'+cat)
@@ -133,7 +131,7 @@ function goHome(){
 }
 function renderProducts(){
  const q=document.getElementById('search').value.toLowerCase().trim();
- const list=products.filter(p=>p.cat===active && p.mrp<priceMax && (!q || (p.name+' '+p.desc).toLowerCase().includes(q)));
+ const list=products.filter(p=>(active==='sale'?p.mrp<=150:p.cat===active) && p.mrp<priceMax && (!q || (p.name+' '+p.desc).toLowerCase().includes(q)));
  const el=document.getElementById('products');
  el.innerHTML=list.length?list.map(p=>`<article class="product"><img src="Images/${p.img}" alt="${p.name}" loading="lazy"><div class="pbody"><span class="tag">${active==='stationery'?'STATIONERY':active==='lunch'?'LUNCH BOX':'KIT'}</span><div class="pname">${p.name}</div><div class="desc">${p.desc}</div><div class="mrp">MRP ₹${p.mrp}</div></div></article>`).join(''):'<div class="empty">No matching products found.</div>'
 }
@@ -154,7 +152,6 @@ document.querySelectorAll('.filter').forEach(btn=>{
 });
 window.addEventListener('popstate',()=>{const c=location.hash.slice(1);c&&labels[c]?openCat(c):goHome()});
 const initial=location.hash.slice(1);
-renderSale();
 if(initial&&labels[initial])openCat(initial);
 </script>
 </body></html>
