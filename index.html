@@ -163,11 +163,10 @@ try{
  doc.setFontSize(13);doc.text('Final Total: Rs.'+total.toFixed(2),14,y+5);
  const pdfBlob=doc.output('blob');
  const file=new File([pdfBlob],`Goyal_Order_${orderNo}.pdf`,{type:'application/pdf'});
- if(navigator.share && navigator.canShare){
-   try{if(navigator.canShare({files:[file]})){await navigator.share({files:[file],text:waText});return;}}catch(shareErr){if(shareErr&&shareErr.name==='AbortError')return;}
- }
  const url=URL.createObjectURL(pdfBlob);const a=document.createElement('a');a.href=url;a.download=`Goyal_Order_${orderNo}.pdf`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
- window.open('https://wa.me/917669241589?text='+encodeURIComponent(waText),'_blank');
+ // Open the shop's WhatsApp chat directly after the customer taps the order button.
+ // The PDF is downloaded separately; WhatsApp receives the order details in the pre-filled message.
+ window.location.href='https://wa.me/917669241589?text='+encodeURIComponent(waText);
 }catch(e){console.error(e);alert('Could not create the order PDF. Please try again.');}
 }
 window.addEventListener('popstate',()=>{const h=location.hash.slice(1);if(h==='cart')openCart();else if(h==='product'&&window.currentProduct)openProduct(encodeURIComponent(window.currentProduct.name));else if(labels[h])openCat(h);else goHome();});
